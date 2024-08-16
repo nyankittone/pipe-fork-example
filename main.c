@@ -62,7 +62,7 @@ bool forkIt(void) {
         }
 
         close(the_pipe[0]);
-        _exit(EXIT_SUCCESS); // What makes this function different from exit()?
+        exit(EXIT_SUCCESS);
     } else {
         close(the_pipe[0]); // closing read end here because we don't need it
         char got;
